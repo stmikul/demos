@@ -13,70 +13,65 @@
         <title>SnowShoe Demos</title>
 
         <style>
-            .color-change-5x {
-                -webkit-animation: color-change-5x 8s linear infinite alternate both;
-                animation: color-change-5x 8s linear infinite alternate both;
+            .pulsate-bck {
+            	-webkit-animation: pulsate-bck .5s ease-in-out infinite both;
+            	        animation: pulsate-bck .5s ease-in-out infinite both;
             }
 
-            @-webkit-keyframes color-change-5x {
+            @-webkit-keyframes pulsate-bck {
               0% {
-                background: #2196F3;
-              }
-              25% {
-                background: #9C27B0;
+                -webkit-transform: scale(1);
+                        transform: scale(1);
               }
               50% {
-                background: #F44336;
-              }
-              75% {
-                background: #FF9800;
+                -webkit-transform: scale(0.9);
+                        transform: scale(0.9);
               }
               100% {
-                background: #4CAF50;
+                -webkit-transform: scale(1);
+                        transform: scale(1);
               }
             }
-            @keyframes color-change-5x {
+            @keyframes pulsate-bck {
               0% {
-                background: #2196F3;
-              }
-              25% {
-                background: #9C27B0;
+                -webkit-transform: scale(1);
+                        transform: scale(1);
               }
               50% {
-                background: #F44336;
-              }
-              75% {
-                background: #FF9800;
+                -webkit-transform: scale(0.9);
+                        transform: scale(0.9);
               }
               100% {
-                background: #4CAF50;
+                -webkit-transform: scale(1);
+                        transform: scale(1);
               }
             }
         </style>
     </head>
-    <body class="background4 color-change-5x">
+    <body class="background6">
         <div class="d-flex w-100 h-100 mx-auto flex-column">
             <header class="mb-auto">
                 <nav class="navbar fixed-top">
                     <div class="mr-auto">
-                        <a href="index3.html">
+                        <a href="index5.html">
                             <img src="img/arrow_back.svg" class="img-fluid" width="40">
                         </a>
                     </div>
                     <div class="ml-auto">
-                        <a href="index5.html">
+                        <a href="index.html">
                             <img src="img/arrow_forward.svg" class="img-fluid" width="40">
                         </a>
                     </div>
                 </nav>
             </header>
             <main class="text-center">
-                <h3 class="mb-4 font-italic">Stamp the screen</h3>
+                <h4 class="mb-4">Stamp the screen</h4>
+                <img src="img/stamp.svg" class="img-fluid pulsate-bck">
             </main>
             <footer class="mt-auto">
                 <nav class="navbar fixed-bottom">
                     <div class="mx-auto">
-                        <small class="navbar-text">Option 4</small>
+                        <small class="navbar-text">Option 5</small>
                     </div>
                 </nav>
             </footer>

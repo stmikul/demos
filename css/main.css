@@ -27,6 +27,16 @@ html, body {
     padding: 2rem;
 }
 
+.background5 {
+    background-color: #00AEE4;
+    padding: 4rem;
+}
+
+.background6 {
+    background-color: #00AEE4;
+    padding: 4rem;
+}
+
 
 /* Extra small devices (portrait phones, less than 576px) */
 /* No media query for `xs` since this is the default in Bootstrap */
