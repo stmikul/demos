@@ -4,6 +4,10 @@ html, body {
     font-family: 'Comfortaa', sans-serif;
 }
 
+a, a:visited, a:active {
+    color: #FFFFFF;
+}
+
 .background1 {
     background-color: #00AEE4;
     background-image: url(../img/square_dotted.svg);
