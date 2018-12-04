@@ -4,7 +4,7 @@ html, body {
     font-family: 'Comfortaa', sans-serif;
 }
 
-a, a:visited, a:active {
+a, a:visited, a:active, a:focus {
     color: #FFFFFF;
 }
 
