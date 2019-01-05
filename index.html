@@ -40,7 +40,7 @@
 </head>
 
 <body>
-  <h2>Geo - Calculate the distance between here and there</h2>
+  <h2>Geo - Calculate the distance between here and there!</h2>
   <div id="geo-input">
     Geo1:
     <input id="geo1" name="geo1" type="text" placeholder="32.00,34.33"> Geo2:
@@ -78,7 +78,7 @@
     dist = dist * 180 / Math.PI
     dist = dist * 60 * 1.1515
     if (unit == "K") {
-      dist = (dist * 1.609344) / 1093.61
+      dist = (dist * 1.609344) * 1093.61
     }
     if (unit == "N") {
       dist = dist * 0.8684
