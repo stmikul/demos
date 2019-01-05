@@ -53,8 +53,8 @@
   <hr>
   <p id="demo">Click the button to get your position.</p>
   <button onclick="getLocation()">What is my location?</button>
-  <div id="map">
-  </div>
+  <!-- <div id="map">
+  </div> -->
   <script src="https://code.jquery.com/jquery-2.2.2.min.js" integrity="sha256-36cp2Co+/62rEAAYHLmRCPIych47CvdM+uTBJwSzWjI=" crossorigin="anonymous"></script>
 
   <script>
@@ -78,7 +78,7 @@
     dist = dist * 180 / Math.PI
     dist = dist * 60 * 1.1515
     if (unit == "K") {
-      dist = dist * 1.609344
+      dist = dist * 1.609344 / 1093.61
     }
     if (unit == "N") {
       dist = dist * 0.8684
