@@ -63,7 +63,7 @@
     var geo2 = $("#geo2").val().split(",");
     var distance = distanceBetween(geo1[0], geo1[1], geo2[0], geo2[1], "K");
     console.log("geo dis: " + distance);
-    $("#dis").html("<h4>" + distance + "Km</h4>");
+    $("#dis").html("<h4>" + distance + " meters</h4>");
   }
 
   function distanceBetween(lat1, lon1, lat2, lon2, unit) {
