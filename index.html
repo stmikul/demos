@@ -13,10 +13,19 @@
     <body>
         <!-- <h2>Geo - Calculate the distance between here and there</h2> -->
         <div id="geo-input">
-          Geo1:
+            <div class="form-group">
+                <label>Geo 1</label>
+                <input type="text" class="form-control" id="geo1">
+            </div>
+            <div class="form-group">
+                <label>Geo 2</label>
+                <input type="text" class="form-control" id="geo2">
+            </div>
+            <button type="submit" class="btn btn-primary" onclick="getDis()">Submit</button>
+          <!-- Geo1:
           <input id="geo1" name="geo1" type="text" placeholder="32.00,34.33"> Geo2:
           <input id="geo2" name="geo2" type="text" placeholder="32.00,34.33">
-          <button onclick="getDis()">Get Distance</button>
+          <button onclick="getDis()">Get Distance</button> -->
         </div>
         <div id="dis"></div>
         <br>
@@ -34,7 +43,7 @@
           var geo2 = $("#geo2").val().split(",");
           var distance = distanceBetween(geo1[0], geo1[1], geo2[0], geo2[1], "K");
           console.log("geo dis: " + distance);
-          $("#dis").html("<h4>" + distance + " meters</h4>");
+          $("#dis").html("<h4>" + distance + " yards</h4>");
         }
 
         function distanceBetween(lat1, lon1, lat2, lon2, unit) {
