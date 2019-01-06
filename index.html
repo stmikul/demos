@@ -11,21 +11,20 @@
         <title>Hello, world!</title>
     </head>
     <body>
-        <!-- <h2>Geo - Calculate the distance between here and there</h2> -->
-        <div id="geo-input">
-            <div class="form-group">
-                <label>Geo 1</label>
-                <input type="text" class="form-control" id="geo1">
+        <div class="container">
+            <div class="row">
+                <div class="col" id="geo-input">
+                    <div class="form-group">
+                        <label>Geo 1</label>
+                        <input type="text" class="form-control" id="geo1">
+                    </div>
+                    <div class="form-group">
+                        <label>Geo 2</label>
+                        <input type="text" class="form-control" id="geo2">
+                    </div>
+                    <button type="submit" class="btn btn-primary" onclick="getDis()">Submit</button>
+                </div>
             </div>
-            <div class="form-group">
-                <label>Geo 2</label>
-                <input type="text" class="form-control" id="geo2">
-            </div>
-            <button type="submit" class="btn btn-primary" onclick="getDis()">Submit</button>
-          <!-- Geo1:
-          <input id="geo1" name="geo1" type="text" placeholder="32.00,34.33"> Geo2:
-          <input id="geo2" name="geo2" type="text" placeholder="32.00,34.33">
-          <button onclick="getDis()">Get Distance</button> -->
         </div>
         <div id="dis"></div>
         <br>
