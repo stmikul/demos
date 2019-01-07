@@ -32,13 +32,7 @@
           zoom: 6
         });
         infoWindow = new google.maps.InfoWindow;
-
-        // KML layer
-        var ctaLayer = new google.maps.KmlLayer({
-          url: 'https://raw.githubusercontent.com/stmikul/demos/master/My%20Places.kml',
-          map: map
-        });
-
+        
         // Try HTML5 geolocation.
         if (navigator.geolocation) {
           navigator.geolocation.getCurrentPosition(function(position) {
