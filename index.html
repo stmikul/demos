@@ -32,7 +32,7 @@
           zoom: 6
         });
         infoWindow = new google.maps.InfoWindow;
-        
+
         // Try HTML5 geolocation.
         if (navigator.geolocation) {
           navigator.geolocation.getCurrentPosition(function(position) {
@@ -61,6 +61,12 @@
                               'Error: Your browser doesn\'t support geolocation.');
         infoWindow.open(map);
       }
+
+      // KML layer
+      var ctaLayer = new google.maps.KmlLayer({
+        url: 'https://raw.githubusercontent.com/stmikul/demos/master/My%20Places.kml',
+        map: map
+      });
     </script>
     <script async defer
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDpiwnilRuKpbXtfmiCtwydGeJa7uSCDGI&callback=initMap">
