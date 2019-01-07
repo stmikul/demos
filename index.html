@@ -39,31 +39,31 @@
 
         var bermudaTriangle = new google.maps.Polygon({paths: triangleCoords});
 
-        google.maps.event.addListener(map, 'click', function(e) {
-          var resultColor =
-              google.maps.geometry.poly.containsLocation(e.latLng, bermudaTriangle) ?
-              'blue' :
-              'red';
-
-          var resultPath =
-              google.maps.geometry.poly.containsLocation(e.latLng, bermudaTriangle) ?
-              // A triangle.
-              "m 0 -1 l 1 2 -2 0 z" :
-              google.maps.SymbolPath.CIRCLE;
-
-          new google.maps.Marker({
-            position: e.latLng,
-            map: map,
-            icon: {
-              path: resultPath,
-              fillColor: resultColor,
-              fillOpacity: .2,
-              strokeColor: 'white',
-              strokeWeight: .5,
-              scale: 10
-            }
-          });
-        });
+        // google.maps.event.addListener(map, 'click', function(e) {
+        //   var resultColor =
+        //       google.maps.geometry.poly.containsLocation(e.latLng, bermudaTriangle) ?
+        //       'blue' :
+        //       'red';
+        //
+        //   var resultPath =
+        //       google.maps.geometry.poly.containsLocation(e.latLng, bermudaTriangle) ?
+        //       // A triangle.
+        //       "m 0 -1 l 1 2 -2 0 z" :
+        //       google.maps.SymbolPath.CIRCLE;
+        //
+        //   new google.maps.Marker({
+        //     position: e.latLng,
+        //     map: map,
+        //     icon: {
+        //       path: resultPath,
+        //       fillColor: resultColor,
+        //       fillOpacity: .2,
+        //       strokeColor: 'white',
+        //       strokeWeight: .5,
+        //       scale: 10
+        //     }
+        //   });
+        // });
       }
     </script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDpiwnilRuKpbXtfmiCtwydGeJa7uSCDGI&libraries=geometry&callback=initMap"
