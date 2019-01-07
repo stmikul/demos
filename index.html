@@ -52,6 +52,11 @@
           // Browser doesn't support Geolocation
           handleLocationError(false, infoWindow, map.getCenter());
         }
+
+        var ctaLayer = new google.maps.KmlLayer({
+          url: 'https://raw.githubusercontent.com/stmikul/demos/master/My%20Places.kml',
+          map: map
+        });
       }
 
       function handleLocationError(browserHasGeolocation, infoWindow, pos) {
@@ -61,12 +66,6 @@
                               'Error: Your browser doesn\'t support geolocation.');
         infoWindow.open(map);
       }
-
-      // KML layer
-      var ctaLayer = new google.maps.KmlLayer({
-        url: 'https://raw.githubusercontent.com/stmikul/demos/master/My%20Places.kml',
-        map: map
-      });
     </script>
     <script async defer
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDpiwnilRuKpbXtfmiCtwydGeJa7uSCDGI&callback=initMap">
