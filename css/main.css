@@ -10,17 +10,25 @@ header img, footer img {
     padding: .5rem;
 }
 
-/* Extra small devices (portrait phones, less than 576px) */
-/* No media query for `xs` since this is the default in Bootstrap */
+header {
+    font-size: 1.5rem;
+}
 
-/* Small devices (landscape phones, 576px and up) */
-@media (max-width: 576px) {}
+header a, header a:hover {
+    color: white;
+    text-decoration: none;
+}
 
-/* Medium devices (tablets, 768px and up) */
-@media (max-width: 768px) {}
+main .container-fluid {
+    margin: 0;
+    padding: 0;
+}
 
-/* Large devices (desktops, 992px and up) */
-@media (max-width: 992px) {}
+.table {
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
 
-/* Extra large devices (large desktops, 1200px and up) */
-@media (max-width: 1200px) {}
+.table td, .table th {
+    vertical-align: middle;
+}
