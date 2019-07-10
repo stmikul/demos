@@ -2,33 +2,3 @@ html, body {
     height: 100%;
 }
 
-header .row, footer .row {
-    height: 80px;
-}
-
-header img, footer img {
-    padding: .5rem;
-}
-
-header {
-    font-size: 1.5rem;
-}
-
-header a, header a:hover {
-    color: white;
-    text-decoration: none;
-}
-
-main .container-fluid {
-    margin: 0;
-    padding: 0;
-}
-
-.table {
-    padding-left: 2rem;
-    padding-right: 2rem;
-}
-
-.table td, .table th {
-    vertical-align: middle;
-}
