@@ -12,20 +12,47 @@
         <title>SnowShoe Demos</title>
     </head>
     <body class="bg_snowshoe_blue">
-        <div class="container text-center">
-            <div class="row mb-4">
-                <div class="col">
-                    <h1>Demo Apps</h1>
+        <div class="d-flex w-100 h-100 mx-auto flex-column">
+            <header class="mb-auto" style="z-index:0;">
+                <nav class="navbar fixed-top">
+                    <div class="mx-auto">
+                        <span class="navbar-text"><img src={% static 'apps/img/logo.svg' %} class="img-fluid" width="120" onclick="location.href='/apps/'"></span>
+                    </div>
+                </nav>
+            </header>
+            <main>
+                <div class="container text-center">
+                    <div class="row mb-4">
+                        <div class="col">
+                            <h1>Demo Apps</h1>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <button class="btn btn-outline-light btn-lg btn-block" type="button" onclick="location.href='/apps/offer'">Loyalty</button>
+                            <button class="btn btn-outline-light btn-lg btn-block mt-2" type="button" onclick="location.href='/apps/welcome'">Ticketing</button>
+                            <button class="btn btn-outline-light btn-lg btn-block mt-2" type="button" onclick="location.href='/apps/free_drink/1/'">Coupon</button>
+                        </div>
+                    </div>
                 </div>
-            </div>
-            <div class="row">
-                <div class="col">
-                    <button class="btn btn-outline-light btn-lg btn-block" type="button" onclick="location.href='/apps/offer'">Loyalty</button>
-                    <button class="btn btn-outline-light btn-lg btn-block mt-2" type="button" onclick="location.href='/apps/welcome'">Ticketing</button>
-                    <button class="btn btn-outline-light btn-lg btn-block mt-2" type="button" onclick="location.href='/apps/free_drink/1/'">Coupon</button>
-                </div>
-            </div>
+            </main>
+            <footer class="mt-auto" style="z-index:0;">
+                <nav class="navbar fixed-bottom">
+                    <div class="mx-auto">
+                        <span class="navbar-text">
+                            <strong>1</strong>Test
+                        </span>
+                    </div>
+                </nav>
+            </footer>
         </div>
+
+
+
+
+
+
+        
 
         <!-- Optional JavaScript -->
         <!-- jQuery first, then Popper.js, then Bootstrap JS -->
