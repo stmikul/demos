@@ -1,0 +1,285 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <style>
+        .material-icons { vertical-align: bottom !important; }
+
+        .statcard-number {
+  margin-top: 0;
+  margin-bottom: 0; }
+  .statcard-number .badge {
+    font-size: 45%;
+    vertical-align: middle; }
+
+.statcard-desc {
+  font-size: 85%;
+  letter-spacing: .15em;
+  color: #828a9f;
+  text-transform: uppercase; }
+
+.delta-indicator {
+  display: inline-block;
+  padding: .4em;
+  font-size: 12px;
+  vertical-align: middle; }
+  .delta-indicator:after {
+    content: "";
+    display: inline-block;
+    width: 0;
+    height: 0;
+    margin-left: 2px;
+    margin-left: 2px;
+    vertical-align: middle;
+    border-right: 4px solid transparent;
+    border-left: 4px solid transparent; }
+
+.delta-positive {
+  color: #1BC98E; }
+  .delta-positive:after {
+    border-top: 0;
+    border-bottom: 4px solid; }
+
+.delta-negative {
+  color: #E64759; }
+  .delta-negative:after {
+    border-bottom: 0;
+    border-top: 4px solid; }
+
+.statcard-primary,
+.statcard-success,
+.statcard-info,
+.statcard-warning,
+.statcard-danger {
+  color: #fff;
+  border-radius: 3px; }
+  .statcard-primary .delta-negative,
+  .statcard-primary .delta-positive,
+  .statcard-primary .statcard-number,
+  .statcard-success .delta-negative,
+  .statcard-success .delta-positive,
+  .statcard-success .statcard-number,
+  .statcard-info .delta-negative,
+  .statcard-info .delta-positive,
+  .statcard-info .statcard-number,
+  .statcard-warning .delta-negative,
+  .statcard-warning .delta-positive,
+  .statcard-warning .statcard-number,
+  .statcard-danger .delta-negative,
+  .statcard-danger .delta-positive,
+  .statcard-danger .statcard-number {
+    font-weight: normal;
+    color: inherit; }
+  .statcard-primary .statcard-desc,
+  .statcard-success .statcard-desc,
+  .statcard-info .statcard-desc,
+  .statcard-warning .statcard-desc,
+  .statcard-danger .statcard-desc {
+    font-weight: normal;
+    color: rgba(255, 255, 255, 0.65); }
+  .statcard-primary .statcard-hr,
+  .statcard-success .statcard-hr,
+  .statcard-info .statcard-hr,
+  .statcard-warning .statcard-hr,
+  .statcard-danger .statcard-hr {
+    margin-left: -1rem;
+    margin-right: -1rem;
+    border-top-color: rgba(255, 255, 255, 0.2); }
+
+.statcard-primary {
+  background-color: #1997c6; }
+
+.statcard-success {
+  background-color: #1BC98E; }
+
+.statcard-info {
+  background-color: #9F86FF; }
+
+.statcard-warning {
+  background-color: #E4D836; }
+
+.statcard-danger {
+  background-color: #E64759; }
+    </style>
+
+    <title>SnowShoe</title>
+  </head>
+  <body>
+        <div class="container mt-5">
+            <div class="row">
+                <div class="col-3 sidebar pr-5">
+                    <a class="navbar-brand" href="index.html">SnowShoe</a>
+                    <div class="dropdown">
+                        <a class="btn btn-sm btn-link text-truncate dropdown-toggle mx-0 px-0" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            sheradyn@snowshoestamp.com
+                        </a>  
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                            <a class="dropdown-item" href="account_settings.html">Account Settings</a>
+                            <a class="dropdown-item" href="#">Logout</a>
+                        </div>
+                    </div>
+                    <hr>
+                    <ul class="nav nav-pills nav-stacked flex-column">
+                        <li class="nav-header mb-2">Dashboard</li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="index.html">Analytics</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="applications.html">Applications</a>
+                        </li>
+                    </ul>
+                    <hr>
+                    <!-- <ul class="nav nav-pills nav-stacked flex-column">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Account Settings</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Logout</a>
+                        </li>
+                    </ul> -->
+                    <!-- <hr> -->
+                </div>
+                <div class="col-9 content">
+                    <div class="row">
+                        <div class="col">
+                            <span class="text-muted small text-uppercase">API Calls</span>
+                        </div>
+                    </div>
+                    <div class="row justify-content-between align-items-center">
+                        <div class="col">
+                            <!-- <h4 class="my-1"><i class="material-icons mr-2">assessment</i>Analytics</h4> -->
+                            <h4 class="my-1">Analytics</h4>
+                        </div>
+                        <div class="col-auto">
+                            <div class="dropdown d-flex align-items-center">
+                                <span class="text-muted mr-3">Viewing the previous hour</span>
+                                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    1 Hour
+                                </button>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                    <a class="dropdown-item" href="#">1 Hour</a>
+                                    <a class="dropdown-item" href="#">1 Day</a>
+                                    <a class="dropdown-item" href="#">1 Week</a>
+                                    <a class="dropdown-item" href="#">2 Weeks</a>
+                                    <a class="dropdown-item" href="#">1 Month</a>
+                                    <a class="dropdown-item" href="#">3 Months</a>
+                                    <a class="dropdown-item" href="#">1 Year</a>
+                                    <div class="dropdown-divider"></div>
+                                    <!-- Button trigger modal -->
+                                    <a class="dropdown-item" href="#" data-toggle="modal" data-target="#customDateModal">Custom</a>
+                                </div>
+                                <!-- <span class="text-muted mx-2">for</span>
+                                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownAppButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    All Applications
+                                </button>
+                                <div class="dropdown-menu" aria-labelledby="dropdownAppButton">
+                                    <a class="dropdown-item" href="#">My Test App #1</a>
+                                    <a class="dropdown-item" href="#">My Test App #2</a>
+                                    <a class="dropdown-item" href="#">My Test App #3</a>
+                                </div> -->
+                            </div>
+                        </div>
+                    </div>
+                    <!-- <div class="row statcards mt-3">
+                        <div class="col-md-6 col-xl-3 mb-3 mb-md-4 mb-xl-0">
+                            <div class="statcard statcard-success"><iframe class="chartjs-hidden-iframe" tabindex="-1" style="display: block; overflow: hidden; border: 0px; margin: 0px; top: 0px; left: 0px; bottom: 0px; right: 0px; height: 100%; width: 100%; position: absolute; pointer-events: none; z-index: -1;"></iframe>
+                            <div class="p-3">
+                                <span class="statcard-desc">Page views</span>
+                                <h2 class="statcard-number">
+                                1,293
+                                <small class="delta-indicator delta-positive">5%</small>
+                                </h2>
+                                <hr class="statcard-hr mb-0">
+                            </div>
+                            <canvas id="sparkline1" width="372" height="92" class="sparkline js-chart-drawn" data-chart="spark-line" data-dataset="[[28,68,41,43,96,45,100]]" data-labels="['a','b','c','d','e','f','g']" style="width: 186px; height: 46px; display: block;">
+                            </canvas>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-xl-3 mb-3 mb-md-4 mb-xl-0">
+                            <div class="statcard statcard-danger"><iframe class="chartjs-hidden-iframe" tabindex="-1" style="display: block; overflow: hidden; border: 0px; margin: 0px; top: 0px; left: 0px; bottom: 0px; right: 0px; height: 100%; width: 100%; position: absolute; pointer-events: none; z-index: -1;"></iframe>
+                            <div class="p-3">
+                                <span class="statcard-desc">Downloads</span>
+                                <h2 class="statcard-number">
+                                758
+                                <small class="delta-indicator delta-negative">1.3%</small>
+                                </h2>
+                                <hr class="statcard-hr mb-0">
+                            </div>
+                            <canvas id="sparkline1" width="372" height="92" class="sparkline js-chart-drawn" data-chart="spark-line" data-dataset="[[4,34,64,27,96,50,80]]" data-labels="['a', 'b','c','d','e','f','g']" style="width: 186px; height: 46px; display: block;"></canvas>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-xl-3 mb-3 mb-md-4 mb-xl-0">
+                            <div class="statcard statcard-info"><iframe class="chartjs-hidden-iframe" tabindex="-1" style="display: block; overflow: hidden; border: 0px; margin: 0px; top: 0px; left: 0px; bottom: 0px; right: 0px; height: 100%; width: 100%; position: absolute; pointer-events: none; z-index: -1;"></iframe>
+                            <div class="p-3">
+                                <span class="statcard-desc">Sign-ups</span>
+                                <h2 class="statcard-number">
+                                1,293
+                                <small class="delta-indicator delta-positive">6.75%</small>
+                                </h2>
+                                <hr class="statcard-hr mb-0">
+                            </div>
+                            <canvas id="sparkline1" width="372" height="92" class="sparkline js-chart-drawn" data-chart="spark-line" data-dataset="[[12,38,32,60,36,54,68]]" data-labels="['a', 'b','c','d','e','f','g']" style="width: 186px; height: 46px; display: block;"></canvas>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-xl-3 mb-3 mb-md-4 mb-xl-0">
+                            <div class="statcard statcard-warning"><iframe class="chartjs-hidden-iframe" tabindex="-1" style="display: block; overflow: hidden; border: 0px; margin: 0px; top: 0px; left: 0px; bottom: 0px; right: 0px; height: 100%; width: 100%; position: absolute; pointer-events: none; z-index: -1;"></iframe>
+                            <div class="p-3">
+                                <span class="statcard-desc">Downloads</span>
+                                <h2 class="statcard-number">
+                                758
+                                <small class="delta-indicator delta-negative">1.3%</small>
+                                </h2>
+                                <hr class="statcard-hr mb-0">
+                            </div>
+                            <canvas id="sparkline1" width="372" height="92" class="sparkline js-chart-drawn" data-chart="spark-line" data-dataset="[[43,48,52,58,50,95,100]]" data-labels="['a', 'b','c','d','e','f','g']" style="width: 186px; height: 46px; display: block;"></canvas>
+                            </div>
+                        </div>
+                    </div> -->
+                    <div class="row mt-3">
+                        <div class="col">
+                            <div class="jumbotron jumbotron-fluid py-5">
+                                <div class="container my-5 py-5 text-center">
+                                    <h1 class="display-4 my-5 py-5">Analytics Graph</h1>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mb-4">
+                        <div class="col">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Application</th>
+                                        <th scope="col">API Calls</th>
+                                        <th scope="col">Active Stamps</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><a href="app_analytics.html">Sample App ABC</a></td>
+                                        <td>1,234</td>
+                                        <td>9 of 10</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>
