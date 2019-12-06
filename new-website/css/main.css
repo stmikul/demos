@@ -1,0 +1,21 @@
+html, body {
+    font-family: 'Comfortaa', cursive;
+}
+
+.flickity-prev-next-button {
+    /* border: 4px solid #dee2e6 !important; */
+    border: 4px solid rgba(0, 173, 228, 0.56) !important;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out !important;
+}
+
+.flickity-prev-next-button:hover {
+    border: 4px solid rgba(0, 173, 228, 1) !important;
+}
+
+.slider-phone .flickity-prev-next-button.previous {
+    left: 22rem !important;
+}
+
+.slider-phone .flickity-prev-next-button.next {
+    right: 22rem !important;
+}
