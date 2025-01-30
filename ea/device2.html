@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Particle Photon Control</title>
+    <script>
+        async function callParticleFunction(functionName) {
+            const deviceId = '0a10aced202194944a04bba0'; // Replace with your Particle Photon 2 device ID
+            const accessToken = 'be7fbe58b2ce37101ba8ec4ba937264e90fa6ca0'; // Replace with your Particle access token
+
+            const url = `https://api.particle.io/v1/devices/${deviceId}/${functionName}`;
+            const data = {
+                arg: '',
+                access_token: accessToken
+            };
+
+            try {
+                const response = await fetch(url, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/x-www-form-urlencoded'
+                    },
+                    body: new URLSearchParams(data)
+                });
+
+                const result = await response.json();
+                console.log(result);
+
+                if (functionName === 'toggleLED') {
+                    //alert(`LED is now ${result.return_value === 1 ? 'ON' : 'OFF'}`);
+                } else if (functionName === 'activateBuzzer') {
+                    //alert('Buzzer activated');
+                }
+            } catch (error) {
+                console.error('Error:', error);
+            }
+        }
+
+        function toggleLED() {
+            callParticleFunction('toggleLED');
+        }
+
+        function activateBuzzer() {
+            callParticleFunction('activateBuzzer');
+        }
+    </script>
+</head>
+<body>
+    <h1>Particle Photon Control</h1>
+    <button onclick="toggleLED()">Toggle LED</button>
+    <button onclick="activateBuzzer()">Activate Buzzer</button>
+</body>
+</html>
